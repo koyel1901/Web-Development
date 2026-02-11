@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar Display</title>
+    <script>
+        function showCalendar() {
+            var month = parseInt(document.getElementById("month").value);
+            var year = parseInt(document.getElementById("year").value);
+
+            var date = new Date(year, month, 1);
+            var days = new Date(year, month + 1, 0).getDate();
+
+            var output = "<table border='1'><tr>";
+            output += "<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th>";
+            output += "<th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+
+            for (var i = 0; i < date.getDay(); i++) {
+                output += "<td></td>";
+            }
+
+            for (var d = 1; d <= days; d++) {
+                output += "<td>" + d + "</td>";
+                if ((d + date.getDay()) % 7 === 0) {
+                    output += "</tr><tr>";
+                }
+            }
+
+            output += "</tr></table>";
+            document.getElementById("calendar").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h2>Calendar Generator</h2>
+
+    Month:
+    <select id="month">
+        <option value="0">January</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+    </select>
+
+    Year:
+    <select id="year">
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+    </select>
+
+    <button onclick="showCalendar()">Show Calendar</button>
+
+    <div id="calendar"></div>
+</body>
+</html>
