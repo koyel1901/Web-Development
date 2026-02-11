@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Handling</title>
+</head>
+<body>
+
+<h3>Current Day and Time</h3>
+<p id="dayTime"></p>
+
+<script>
+    const today = new Date();
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+    let day = days[today.getDay()];
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let second = today.getSeconds();
+    let ampm = hour >= 12 ? "PM" : "AM";
+
+    hour = hour % 12 || 12;
+
+    document.getElementById("dayTime").innerHTML =
+        "Today is : " + day + "<br>" +
+        "Current time is : " + hour + " " + ampm + " : " + minute + " : " + second;
+</script>
+
+</body>
+</html>
