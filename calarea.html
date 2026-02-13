@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area of Rectangle</title>
+</head>
+<body>
+<h2>Calculate Area of Rectangle</h2>
+Length:
+<input type="number" id="length"><br><br>
+Breadth:
+<input type="number" id="breadth"><br><br>
+<button onclick="displayArea()">Calculate Area</button>
+<p id="result"></p>
+<script>
+function calculateArea(length, breadth) {
+    return length * breadth;
+}
+function displayArea() {
+    var l = parseFloat(document.getElementById("length").value);
+    var b = parseFloat(document.getElementById("breadth").value);
+    var area = calculateArea(l, b);
+    document.getElementById("result").innerHTML =
+        "Area of Rectangle = " + area;
+}
+</script>
+</body>
+</html>
