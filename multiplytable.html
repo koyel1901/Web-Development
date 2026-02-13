@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+<h2>Multiplication Table</h2>
+<input type="number" id="number">
+<button onclick="printTable()">Print</button>
+<p id="table"></p>
+<script>
+function printTable() {
+    var num = document.getElementById("number").value;
+    var output = "";
+    for (var i = 1; i <= 10; i++) {
+        output += num + " x " + i + " = " + (num * i) + "<br>";
+    }
+    document.getElementById("table").innerHTML = output;
+}
+</script>
+</body>
+</html>
+
