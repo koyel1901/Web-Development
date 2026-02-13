@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Functions</title>
+</head>
+<body>
+<h2>Math Functions Example</h2>
+Enter First Number:
+<input type="number" id="num1"><br><br>
+Enter Second Number:
+<input type="number" id="num2"><br><br>
+<button onclick="calculate()">Calculate</button>
+<p id="result"></p>
+<script>
+function calculate() {
+    var a = parseFloat(document.getElementById("num1").value);
+    var b = parseFloat(document.getElementById("num2").value);
+    var sqrt = Math.sqrt(a);
+    var power = Math.pow(a, b);
+    var maximum = Math.max(a, b);
+    var minimum = Math.min(a, b);
+    var difference = Math.abs(a - b);
+    document.getElementById("result").innerHTML =
+        "Square Root of first number: " + sqrt + "<br>" +
+        "Power (a^b): " + power + "<br>" +
+        "Maximum: " + maximum + "<br>" +
+        "Minimum: " + minimum + "<br>" +
+        "Absolute Difference: " + difference;
+}
+</script>
+</body>
+</html>
