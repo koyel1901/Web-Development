@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        button {
+            padding: 6px 15px;
+        }
+        #output {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<h2>JSON Creation, Parsing & Display</h2>
+<button onclick="handleJSON()">Show Product Details</button>
+<div id="output"></div>
+<script>
+function handleJSON() {
+    try {
+        var product = {
+            productID: 101,
+            productName: "Laptop",
+            price: 50000,
+            inStock: true
+        };
+        var jsonString = JSON.stringify(product);
+        console.log("JSON String:", jsonString);
+        var parsedData = JSON.parse(jsonString);
+        document.getElementById("output").innerHTML =
+            "Product ID: " + parsedData.productID + "<br>" +
+            "Product Name: " + parsedData.productName + "<br>" +
+            "Price: ₹" + parsedData.price + "<br>" +
+            "In Stock: " + parsedData.inStock;
+    } catch (error) {
+        console.error("JSON Error:", error);
+        document.getElementById("output").innerHTML =
+            "Error while processing JSON.";
+    }
+}
+</script>
+</body>
+</html>
