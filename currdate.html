@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date Formats</title>
+</head>
+<body>
+
+<h2>Current Date</h2>
+<p id="date"></p>
+<script>
+var d = new Date();
+var dd = d.getDate();
+var mm = d.getMonth() + 1;
+var yyyy = d.getFullYear();
+document.getElementById("date").innerHTML =
+(mm + "-" + dd + "-" + yyyy) + "<br>" +
+(mm + "/" + dd + "/" + yyyy) + "<br>" +
+(dd + "/" + mm + "/" + yyyy);
+</script>
+</body>
+</html>
