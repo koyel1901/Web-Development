@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<college>
+    <student id="S101">
+        <name>Anushka Sharma</name>
+        <course>B.Tech</course>
+        <year>3</year>
+        <email>anushka@example.com</email>
+    </student>
+
+    <student id="S102">
+        <name>Rahul Verma</name>
+        <course>BCA</course>
+        <year>2</year>
+        <email>rahul@example.com</email>
+    </student>
+
+    <student id="S103">
+        <name>Priya Singh</name>
+        <course>MCA</course>
+        <year>1</year>
+        <email>priya@example.com</email>
+    </student>
+
+    <student id="S104">
+        <name>Karan Mehta</name>
+        <course>B.Sc</course>
+        <year>3</year>
+        <email>karan@example.com</email>
+    </student>
+
+    <student id="S105">
+        <name>Sneha Roy</name>
+        <course>B.Tech</course>
+        <year>4</year>
+        <email>sneha@example.com</email>
+    </student>
+</college>
